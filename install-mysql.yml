@@ -5,7 +5,7 @@
    connection: ssh
    vars:
      current_password: default([])
-     new_password: Redhat2018**
+     new_password: Redhat2018
    tasks:
      - name: Download file and force basic auth
        yum:
@@ -35,4 +35,3 @@
          - localhost
 
        ignore_errors: true
-       

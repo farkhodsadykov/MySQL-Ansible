@@ -1,5 +1,16 @@
-# Installing MySQL using Ansible
+# Installing MySQL with Ansible
 This `ansible` playbook will install MySQL . Make sure you did all steps and then run playbook.  This playbook checked on Centos/7
+
+## Create digital-Ocean droplet with token 
+1. Create token from digital Ocean [Craete token ](https://www.digitalocean.com/docs/api/create-personal-access-token/)
+2. Create ssh-key and copy full path 
+3. Then run following commands 
+```
+git clone https://github.com/farkhodsadykov/MySQL-Ansible.git
+cd MySQL-Ansible 
+sh run_script.sh
+ansible-playbook -u root -i hosts install-mysql.yml
+```
 
 
 ## Step 1 Cloning repository and creating ssh-key

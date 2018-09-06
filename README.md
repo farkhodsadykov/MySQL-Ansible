@@ -10,7 +10,12 @@ git clone https://github.com/farkhodsadykov/MySQL-Ansible.git
 cd MySQL-Ansible 
 sh run_script.sh
 ansible-playbook -u root -i hosts install-mysql.yml
+ssh root@seversip 
+mysql -u root -p Redhat2018
 ```
+
+4. If everything works you don't have to do other steps.
+
 
 
 ## Step 1 Cloning repository and creating ssh-key

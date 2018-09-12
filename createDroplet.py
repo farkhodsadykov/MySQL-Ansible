@@ -13,8 +13,8 @@ if answer in yesAnswers:
     try:
         manager = digitalocean.Manager(token=myToken)
         keys = manager.get_all_sshkeys()
-        newDroplet = digitalocean.Droplet(token=myToken, name=nameDroplet, region="nyc3", \
-        size_slug='512mb', image='centos-7-x64', ssh_keys=keys, backups=False)
+        newDroplet = digitalocean.Droplet(token=myToken, name=nameDroplet, region="nyc1", \
+        size_slug='1gb', image='centos-7-x64', ssh_keys=keys, backups=False)
         newDroplet.create()
 
         while True:
@@ -37,8 +37,8 @@ elif answer in noAnswers:
 
         manager = digitalocean.Manager(token=myToken)
         keys = manager.get_all_sshkeys()
-        newDroplet = digitalocean.Droplet(token=myToken, name=nameDroplet, region="nyc3", \
-        size_slug='512mb', image='centos-7-x64', ssh_keys=keys, backups=False)
+        newDroplet = digitalocean.Droplet(token=myToken, name=nameDroplet, region="nyc1", \
+        size_slug='1gb', image='centos-7-x64', ssh_keys=keys, backups=False)
         newDroplet.create()
 
         while True:
@@ -49,6 +49,6 @@ elif answer in noAnswers:
                 break
         print("Make sure you can login to this server :" + existDroplet.ip_address)
         print("Then you can start ansible-playbook")
-        
+
     except Exception as e:
         print("Something wrong please check path and make sure you token do not exist" , e)

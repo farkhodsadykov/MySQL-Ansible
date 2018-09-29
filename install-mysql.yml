@@ -7,7 +7,7 @@
      current_password: default([])
      new_password: Redhat2018
    tasks:
-     - name: Download file and force basic auth
+     - name: Install epel release for MySQL server
        yum:
          name: http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
          state: present

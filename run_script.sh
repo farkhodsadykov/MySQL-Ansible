@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-source VENV/bin/activate
-python3 createDroplet.py
+pip install -r requirements.txt
+python createDroplet.py
